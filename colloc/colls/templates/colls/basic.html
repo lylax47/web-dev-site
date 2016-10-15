@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    {% block title %}
+    {% endblock %}
+    </title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lalezar|Nova+Flat" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/colls.css' %}">
+</head>
+<body class="bg">
+    <div class="page-header">
+        {% if user.is_authenticated %}
+<<<<<<< HEAD
+        <a href="{% url 'upload' %}" class="top-menu">Upload</a>
+=======
+>>>>>>> 5fde28adc1994e430be04d8d96d05522c2dfa4fd
+        <a href="{% url 'logout' %}" class="top-menu">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="top-menu">Login</a>
+        {% endif %}
+        <a href="{% url 'register' %}" class="top-menu">Register</a>
+<<<<<<< HEAD
+=======
+        <a href="{% url 'upload' %}" class="top-menu">Upload</a>
+>>>>>>> 5fde28adc1994e430be04d8d96d05522c2dfa4fd
+        <h1><a href="{% url 'home' %}">Collocation Counter</a></h1>
+
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-8-md">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

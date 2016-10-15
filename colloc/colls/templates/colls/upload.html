@@ -1,0 +1,14 @@
+{% extends 'colls/basic.html' %}
+
+{% block title %}
+Upload
+{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+  {{form.as_p}}
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="{% url 'home' %}">Return to main page</a></p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "colls/basic.html" %}
+
+{% block title %}
+Log In
+{% endblock %}
+
+
+{% block content %}
+
+<h2>Login</h2>
+
+<form method="post" action="{% url 'login' %}">{% csrf_token %}
+  {{form.as_p}}
+
+<input type="submit" value="login" />
+</form>
+
+{% endblock %}

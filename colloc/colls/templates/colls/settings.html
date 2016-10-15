@@ -1,0 +1,26 @@
+{% extends 'colls/basic.html' %}
+
+{% block title %}
+Collocations
+{% endblock %}
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+        <h1>Hello {{ user.username }}, welcome to Collocation Counter!!!</h1>
+        <p>Have fun :)</p>
+    <div>
+        <h3>Settings</h3>
+        <form method="post" action="{% url 'settings' %}">
+            {{form.as_table}}
+        <input type="submit" value="Ready">
+        </form>
+    </div>
+
+
+    {% else %}
+        <h1>This is The Collocation Counter!</h1>
+        <p>Please register or login to experience the awesomeness.</p>
+    {% endif %}
+</div>
+{% endblock %}

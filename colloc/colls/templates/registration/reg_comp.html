@@ -1,0 +1,15 @@
+{% extends "colls/basic.html" %}
+
+{% block title %}
+You are Registered!
+{% endblock %}
+
+
+{% block content %}
+
+   <h2>Thank you for registering.</h2>
+   <p>
+       <a href="{% url 'login' %}">Please Login</a>
+   </p>
+
+{% endblock %}
