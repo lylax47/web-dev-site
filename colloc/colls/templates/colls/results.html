@@ -1,0 +1,49 @@
+{% extends 'colls/basic.html' %}
+{% load staticfiles %}
+
+{% block title %}
+Results
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Results</h1>
+    {% if final %}
+    <table id="colls">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Cooc Count</th>
+                <th>Mean Dist</th>
+                <th>Std Dev</th>
+                <th>Chi</th>
+                <th>Pmi</th>
+                <th>Loglike</th>
+            </tr>
+        </thead>
+        {% for word, values in final.items %}
+            <tr>
+                <td>{{word}}</td>
+                <td>{{values.0}}</td>
+                <td>{{values.1}}</td>
+                <td>{{values.2}}</td>
+                <td>{{values.3}}</td>
+                <td>{{values.4}}</td>
+                <td>{{values.5}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p id="fail">Please try your query again.</p>
+        <img id="deal" src="{% static 'images/yozh2.jpeg'%}">
+        <a id="back" href="{% url 'home' %}">Go home</a>
+        <ul>
+            <p id="fail">Try:</p>
+            <li>Widening criteria of search.</li>
+            <li>Checking for spelling mistakes.</li>
+            <li>Lowering the minimum count.</li>
+            <li>Reading the instructions.</li>
+        </ul>
+    {% endif %}
+</div>
+{% endblock %}

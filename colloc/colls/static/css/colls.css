@@ -1,25 +1,41 @@
 h1 a {
-    color: #FCA205;
-    font-family: 'Bungee Inline';
+    color: #881114;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
 }
-
-.bg {
-    background-color: #000000;
+html {
+    height: 100%;
 }
 
 p {
     color: #008080;
-    font-family: 'Nova Flat'
+    font-family: 'Courgette', cursive;
 }
 
 body {
     padding-left: 15px;
+    background-image:    url(../images/yozhik.jpeg);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
 .page-header {
     background-color: #008080;
     margin-top: 0;
-    padding: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 25px;
+    opacity: 0.55;
+}
+
+title {
+    float: right;
+}
+
+.settings {
+    position: absolute;
+    top: 30%;
+    left: 45%;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -33,34 +49,44 @@ body {
 }
 
 h1, h2, h3, h4 {
-    color: #dc143c;
-    font-family: 'Bungee Inline', cursive;
+    color: #881114;
+    font-family: 'Satisfy', cursive;
 }
 
-.date {
-    color: #828282;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    font-family: 'Lalezar', cursive;
+.top-menu {
+    font-family: 'Lobster Two', cursive;
     color: #ffffff;
     float: right;
     font-size: 26pt;
-    margin-right: 20px;
+    margin: 20px;
+
 }
 
-.post {
-    margin-bottom: 70px;
+#deal {
+    border-radius: 25px;
+    padding:2px;
+    border:2px solid #021a40;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+#fail {
+    font-size: 26px;
+}
+
+ul li {
+    color: #008080;
+    font-family: 'Courgette', cursive;
+    font-size: 15px;
+    padding: 3px;
+}
+
+#back {
+    color: #881114;
+    font-size: 45px;
+    font-family: 'Lobster Two', cursive;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+#instruct {
 }

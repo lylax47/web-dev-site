@@ -1,4 +1,5 @@
 {% extends 'colls/basic.html' %}
+{% load staticfiles %}
 
 {% block title %}
 Collocations
@@ -8,18 +9,25 @@ Collocations
 <div>
     {% if user.is_authenticated %}
         <h1>Hello {{ user.username }}, welcome to Collocation Counter!!!</h1>
-        <p>Have fun :)</p>
-    <div>
+    <div class="settings">
         <h3>Settings</h3>
-<<<<<<< HEAD
-        <form method="post" action="{% url 'home' %}">
+        <form method="post" action="{% url 'home' %}">{% csrf_token %}
             {{form.as_p}}
         <input type="submit" value="Ready">
         </form>
-=======
-        <table>
-        </table>
->>>>>>> 5fde28adc1994e430be04d8d96d05522c2dfa4fd
+    </div>
+    <div class='span6' id="instruct">
+        <h3>Instructions</h3>
+        <p>getting through the fog...</p>
+        <img id='deal' src="{% static 'images/fog.jpg' %}">
+        <ul>
+            <li>Corp - Here you choose on which of the available corpora you want to query.</li>
+            <li>Window - This lets you decide the left and rightmost barriers for your query.</li>
+            <li>Word - The word you wish to query.</li>
+            <li>Min Count - The minimum amount of occurrences within the specified window.</li>
+            <li>After all areas are filled in, please press ready to instantiate your query.</li>
+            <li>Have fun :)</li>
+        </ul>
     </div>
 
 
