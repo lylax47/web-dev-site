@@ -8,26 +8,29 @@ Collocations
 {% block content %}
 <div>
     {% if user.is_authenticated %}
-        <h1>Hello {{ user.username }}, welcome to Collocation Counter!!!</h1>
-    <div class="settings">
-        <h3>Settings</h3>
-        <form method="post" action="{% url 'home' %}">{% csrf_token %}
-            {{form.as_p}}
-        <input type="submit" value="Ready">
-        </form>
+        <h1 class ="thead">Hello {{ user.username }}, welcome to Collocation Counter!!!</h1>
+    <div class="row">
+        <div class ='col-md-3' id="settings">
+            <h3>Settings</h3>
+            <form method="post" action="{% url 'home' %}">{% csrf_token %}
+                {{form.as_p}}
+            <input type="submit" value="Ready">
+            </form>
+        </div>
     </div>
-    <div class='span6' id="instruct">
-        <h3>Instructions</h3>
-        <p>getting through the fog...</p>
-        <img id='deal' src="{% static 'images/fog.jpg' %}">
-        <ul>
-            <li>Corp - Here you choose on which of the available corpora you want to query.</li>
-            <li>Window - This lets you decide the left and rightmost barriers for your query.</li>
-            <li>Word - The word you wish to query.</li>
-            <li>Min Count - The minimum amount of occurrences within the specified window.</li>
-            <li>After all areas are filled in, please press ready to instantiate your query.</li>
-            <li>Have fun :)</li>
-        </ul>
+    <div class="row">
+        <div class='col-md-5' id="instruct">
+            <h3>Instructions</h3>
+            <p>getting through the fog...</p>
+            <img id='deal' src="{% static 'images/fog.jpg' %}">
+            <ul>
+                <li>Corp - Choose corpora you want to query.</li>
+                <li>Window - Decide the left and rightmost barriers of your query.</li>
+                <li>Word - The word you wish to query.</li>
+                <li>Min Count - Minimum occurrences within specified window.</li>
+                <li>Press ready to instantiate your query.</li>
+            </ul>
+        </div>
     </div>
 
 

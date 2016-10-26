@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Satisfy|Courgette" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/colls.css' %}">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/jquery.dynatable.css' %}">
 </head>
 <body>
     <div class="page-header">
@@ -33,5 +33,11 @@
             </div>
         </div>
     </div>
+
+<footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type ="text/javascript" src="{% static 'jq/main.js'%}"></script>
+    <script type = "text/javascript" src="{% static 'jq/jquery.dynatable.js'%}"></script>
+</footer>
 </body>
 </html>

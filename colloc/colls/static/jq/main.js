@@ -1,7 +1,12 @@
-$(document).read(function(){
-    $('#colls').dynatable({
-        table: {
-        defaultColumnIdStyle: 'trimDash'
-         }
+$(document).ready(function(){
+    $('#colls').dynatable ({
+        features: {
+            perPageSelect:null,
+        },
+          table: {
+            defaultColumnIdStyle: 'camelCase',
+            columns:  null,
+            headRowClass: null
+        }
     });
 });
