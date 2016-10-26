@@ -14,6 +14,10 @@ p {
     font-family: 'Courgette', cursive;
 }
 
+.superp {
+    font-size: 26px;
+}
+
 body {
     padding-left: 15px;
     background-image:    url(../images/yozhik.jpeg);
