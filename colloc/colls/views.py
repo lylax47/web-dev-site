@@ -132,6 +132,13 @@ def organize(vals, chi, pmi, logs):
 
 
 def home(request):
+    form = SettingsForm()
+    return render(request, 'colls/home.html', {
+        'form': form
+    })
+
+
+def results(request):
     if request.method == 'POST':
         form = SettingsForm(request.POST)
         if form.is_valid:
@@ -150,11 +157,7 @@ def home(request):
                 'final': final,
             })
     else:
-        form = SettingsForm()
-    return render(request, 'colls/home.html', {
-        'form': form
-    })
-
+        return render(request, 'colls/results.html')
 
 
 def upload(request):

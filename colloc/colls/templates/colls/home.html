@@ -12,7 +12,7 @@ Collocations
     <div class="row">
         <div class ='col-md-3' id="settings">
             <h3>Settings</h3>
-            <form method="post" action="{% url 'home' %}">{% csrf_token %}
+            <form method="post" action="{% url 'results' %}">{% csrf_token %}
                 {{form.as_p}}
             <input type="submit" value="Ready">
             </form>

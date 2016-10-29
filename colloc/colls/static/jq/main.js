@@ -1,13 +1,13 @@
 $(document).ready(function(){
     $('#colls').dynatable ({
-        dataset: {
-        PerPageDefault: 10,
-        perPageOptions:[10],
-        },
-          table: {
-            defaultColumnIdStyle: 'camelCase',
-            columns:  null,
-            headRowClass: null
+    dataset: {
+    PerPageDefault: 10,
+    perPageOptions:[5,10],
+    },
+      table: {
+        defaultColumnIdStyle: 'camelCase',
+        columns:  null,
+        headRowClass: null
         }
     });
     $('#settings, #instruct, .page-header, th').hover(
@@ -30,4 +30,7 @@ $(document).ready(function(){
             $(this).css('background', '#fff');
         }
     );
+//    $('td').click(function(){
+//        $(this).toggleClass("tantd")
+//    });
 });
